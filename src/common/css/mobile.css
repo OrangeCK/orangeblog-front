@@ -1,0 +1,45 @@
+/* 自定义样式 */
+.ck-aside {
+  display: none;
+  width: 200px !important;
+}
+.ck-idx-head-header {
+  font-size: 14px;
+}
+.ck-idx-head-main {
+  font-size: 14px;
+}
+.ck-idx-head-aside {
+  font-size: 12px;
+}
+.ck-idx-head-footer {
+  font-size: 14px;
+}
+.ck-display-none-app {
+  display: none !important;
+}
+.ck-main-div {
+  min-height: 530px;
+}
+/* 覆盖原生样式 */
+.el-col-11 {
+  width: 98%;
+}
+.el-col-6 {
+  width: 70%;
+}
+.el-footer {
+  padding: 10px 10px 10px 10px;
+}
+.el-header {
+  padding: 0px;
+}
+.el-aside {
+  color: #333;
+}
+.el-main {
+  color: #333;
+  text-align: center;
+}
+
+  
