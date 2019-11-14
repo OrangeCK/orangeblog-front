@@ -35,4 +35,7 @@ export default {
   margin-bottom: 0px !important;
   padding: 0px !important;
 }
+.el-drawer__body {
+  overflow:auto;
+}
 </style>

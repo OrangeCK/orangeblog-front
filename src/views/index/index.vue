@@ -16,7 +16,7 @@
           </el-footer>
         </el-container>
         <el-aside class="ck-aside ck-idx-head-aside">
-          <Aside :msg='mainMenun'></Aside>
+          <Aside :msg='mainMenun' ></Aside>
         </el-aside>
     </el-container>
 </template>
