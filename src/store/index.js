@@ -5,12 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    activeName: sessionStorage.getItem('activeName')
+    activeMenu: sessionStorage.getItem('activeMenu')
   },
   mutations: {
-    SET_ActiveName: (state, value) => {
-      state.activeName = value
-      window.sessionStorage.setItem('activeName', value)
+    SET_ActiveMenu: (state, value) => {
+      state.activeMenu = value
+      window.sessionStorage.setItem('activeMenu', value)
     }
   },
   actions: {

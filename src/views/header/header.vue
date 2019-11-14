@@ -3,7 +3,7 @@
       <el-row>
         <el-col :span="5">
           <div class="ck-display-none-pc ck-avatar-drawer" @click="drawer = true">
-            <el-avatar shape="square" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+            <el-avatar shape="square" fit="scale-down" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
           </div>
         </el-col>
         <el-col :span="18">
@@ -13,6 +13,7 @@
               class="el-menu-demo"
               mode="horizontal"
               router
+              @select="handleSelect"
               background-color="#ffffff"
               text-color="#000"
               active-text-color="#ffd04b">
@@ -59,8 +60,8 @@ export default {
       size: '50%',
       showClose: false,
       direction: 'ltr',
-      activeIndex2: '/index/main1',
-      headerText: 'Kang Chen`s Header!'
+      activeIndex2: this.$store.state.activeMenu,
+      headerText: 'Search'
     }
   },
   computed: {
@@ -68,30 +69,14 @@ export default {
   mounted () {
   },
   methods: {
-    handleClick (tab, event) {
-      console.log(tab, event)
+    handleSelect (index, indexPath) {
+      this.$store.commit('SET_ActiveMenu', index)
     }
-    // clickButton () {
-    //   this.$store.commit('SET_ActiveName', this.msg)
-    // }
   }
 }
 </script>
 
 <style lang="less" scoped>
-// @media screen and (min-width: 768px){
-//   .ck-display-none-pc {
-//     display: none !important;
-//   }
-// }
-// @media screen and (max-width: 768px){
-//   .ck-display-none-app {
-//     display: none !important;
-//   }
-//   .el-col-6 {
-//     width: 70%;
-//   }
-// }
 .ck-header-tabs {
   width: 100%;
 }

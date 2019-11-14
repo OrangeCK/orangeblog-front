@@ -57,7 +57,7 @@ export default {
       let availHeight = window.innerHeight - 170
       let setHeight = $('.ck-main-div').css('min-height')
       setHeight = parseInt(setHeight.substring(0, setHeight.length - 2))
-      console.log('当前高度是', availHeight, setHeight)
+      // console.log('当前高度是', availHeight, setHeight)
       if (availHeight > setHeight) {
         let newHeight = availHeight + 'px'
         $('.ck-main-div').css('min-height', newHeight)
@@ -71,55 +71,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// @media screen and (max-width: 768px){
-  // .ck-aside {
-  //   display: none;
-  //   width: 200px !important;
-  // }
-  // .ck-idx-head-header {
-  //   font-size: 14px !important;
-  // }
-  // .ck-idx-head-main {
-  //   font-size: 14px !important;
-  // }
-  // .ck-idx-head-aside {
-  //   font-size: 12px !important;
-  // }
-  // .ck-idx-head-footer {
-  //   font-size: 14px !important;
-  // }
-// }
-// .ck-aside {
-//   width: 200px;
-// }
-// .ck-idx-head-header {
-//   font-size: 16px;
-// }
-// .ck-idx-head-main {
-//   font-size: 16px;
-// }
-// .ck-idx-head-aside {
-//   font-size: 14px;
-// }
-// .ck-idx-head-footer {
-//   font-size: 16px;
-// }
-// .ck-main-div {
-//   min-height: 900px;
-// }
-// .el-footer {
-//   padding: 10px 10px 10px 10px;
-// }
-// .el-header {
-//   padding: 0px;
-// }
-// .el-aside {
-//   color: #333;
-// }
-// .el-main {
-//   color: #333;
-//   text-align: center;
-// }
 .slide-fade-enter-active {
   transition: all .3s ease;
 }

@@ -1,3 +1,6 @@
+#app {
+  min-width: unset;
+}
 /* 自定义样式 */
 .ck-aside {
   display: none;
@@ -13,7 +16,8 @@
   font-size: 12px;
 }
 .ck-idx-head-footer {
-  font-size: 14px;
+  font-size: 10px;
+  text-align: center;
 }
 .ck-display-none-app {
   display: none !important;
@@ -26,8 +30,17 @@
   display: block;
 }
 /* 覆盖原生样式 */
+.el-col-14 {
+  width: 100%;
+}
+.el-col-12 {
+  width: 100%;
+}
 .el-col-11 {
-  width: 98%;
+  width: 100%;
+}
+.el-col-10 {
+  width: 100%;
 }
 .el-col-6 {
   width: 70%;
