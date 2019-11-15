@@ -33,7 +33,7 @@ export default {
   },
   data () {
     return {
-      input: '# shhhs'
+      input: ''
     }
   },
   computed: {
@@ -43,9 +43,9 @@ export default {
   },
   methods: {
     getMarkdownContent () {
-      this.$axios.get('/markdown.json').then((res) => {
-        let markdown = res.data
-        this.input = markdown.markdownText
+      this.$axios.get('/markdown.md').then((res) => {
+        // let markdown = res.data
+        this.input = res.data
       })
     }
   }

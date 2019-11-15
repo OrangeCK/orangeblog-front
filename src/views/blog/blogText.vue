@@ -4,6 +4,9 @@
 
 <script>
 import marked from 'marked'
+import hljs from 'highlight.js'
+// import javascript from 'highlight.js/lib/languages/javascript'
+import 'highlight.js/styles/monokai-sublime.css'
 var rendererMD = new marked.Renderer()
 marked.setOptions({
   renderer: rendererMD,
@@ -13,7 +16,14 @@ marked.setOptions({
   pedantic: false,
   sanitize: false,
   smartLists: true,
-  smartypants: false
+  smartypants: false,
+  highlight: function (code, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      return hljs.highlight(lang, code, true).value
+    } else {
+      return hljs.highlightAuto(code).value
+    }
+  }
 })
 export default {
   name: 'BlogText',
@@ -22,7 +32,7 @@ export default {
   },
   computed: {
     compiledMarkdown: function () {
-      return marked(this.markdownContent, { sanitize: true })
+      return marked(this.markdownContent || '', { sanitize: true })
     }
   },
   mounted () {
@@ -32,5 +42,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style scoped>
+@import '../../common/css/markdown.css'
 </style>
