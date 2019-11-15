@@ -1,36 +1,70 @@
 <template>
-    <div>
-        <div>
-          <el-row :gutter="20">
-            <el-col :span="11" v-for="(o, index) in 7" :key="o" >
-              <div v-if="index%2 !== 0" class="grid-content bg-purple">
-                <el-card class="box-card" shadow="hover">
-                  <el-row :gutter="20">
-                    <el-col :span="10">
-                      <img src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" class="ck-image">
-                    </el-col>
-                    <el-col :span="14">
-                      Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人
-                    </el-col>
-                  </el-row>
-                </el-card>
-              </div>
-              <div v-if="index%2 === 0" class="grid-content bg-purple">
-                <el-card class="box-card" shadow="hover">
-                  <el-row :gutter="20">
-                    <el-col :span="10">
-                      <img src="https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg" class="ck-image">
-                    </el-col>
-                    <el-col :span="14">
-                      Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人
-                    </el-col>
-                  </el-row>
-                </el-card>
-              </div>
-            </el-col>
-          </el-row>
+  <div>
+    <el-row  v-for="(o, index) in 7" :key="o" type="flex" justify="center">
+      <el-col v-if="index%2 !== 0" :span="20">
+        <div class="grid-content bg-purple">
+          <el-card class="box-card" shadow="hover">
+            <el-row :gutter="20">
+              <el-col :span="8">
+                <el-image
+                  class="ck-image-radius"
+                  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+                  fit="scale-down">
+                  <div slot="error" class="image-slot">
+                    <i class="el-icon-picture-outline"></i>
+                  </div>
+                </el-image>
+              </el-col>
+              <el-col :span="16">
+                <div class="ck-card-title">Mybatis-Plus的使用（一）：初识Mybatis-Plus</div>
+                <p class="ck-card-outline">Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人</p>
+                <div class="ck-card-tag">
+                  <el-tag type="warning" effect="dark">栗子生活</el-tag>
+                  <el-tag type="warning">栗子厨房</el-tag>
+                  <el-tag type="info" effect="plain">阅读 99</el-tag>
+                  <el-tag type="info" effect="plain">喜欢 9</el-tag>
+                  <el-tag type="info" effect="plain">2019-11-15 11:18:22</el-tag>
+                </div>
+              </el-col>
+            </el-row>
+          </el-card>
         </div>
-    </div>
+      </el-col>
+      <el-col v-if="index%2 === 0" :span="20">
+        <div class="grid-content bg-purple">
+          <el-card class="box-card" shadow="hover">
+            <el-row :gutter="20">
+              <el-col :span="16">
+                <div class="ck-card-title">Mybatis-Plus的使用（一）：初识Mybatis-Plus</div>
+                <p class="ck-card-outline">Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人</p>
+                <el-row type="flex" justify="end" class="ck-card-tag">
+                  <el-col :span="4">
+                    <el-tag type="warning" effect="dark">栗子生活</el-tag>
+                  </el-col>
+                  <el-col :span="4">
+                    <el-tag type="warning">栗子厨房</el-tag>
+                  </el-col>
+                  <el-col :span="6">
+                    <el-tag type="info" effect="plain">2019-11-15 11:18:22</el-tag>
+                  </el-col>
+                </el-row>
+              </el-col>
+              <el-col :span="8">
+                <el-image
+                  class="ck-image-radius"
+                  src="https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg"
+                  fit="scale-down">
+                  <div slot="error" class="image-slot">
+                    <i class="el-icon-picture-outline"></i>
+                  </div>
+                </el-image>
+              </el-col>
+            </el-row>
+          </el-card>
+        </div>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>

@@ -42,50 +42,6 @@
             </el-image>
           </el-card>
         </el-col>
-        <el-col :span="24">
-          <el-card class="box-card ck-card-border0" shadow="never">
-            <el-image
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-              fit="scale-down">
-              <div slot="error" class="image-slot">
-                <i class="el-icon-picture-outline"></i>
-              </div>
-            </el-image>
-          </el-card>
-        </el-col>
-        <el-col :span="24">
-          <el-card class="box-card ck-card-border0" shadow="never">
-            <el-image
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-              fit="scale-down">
-              <div slot="error" class="image-slot">
-                <i class="el-icon-picture-outline"></i>
-              </div>
-            </el-image>
-          </el-card>
-        </el-col>
-        <el-col :span="24">
-          <el-card class="box-card ck-card-border0" shadow="never">
-            <el-image
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-              fit="scale-down">
-              <div slot="error" class="image-slot">
-                <i class="el-icon-picture-outline"></i>
-              </div>
-            </el-image>
-          </el-card>
-        </el-col>
-        <el-col :span="24">
-          <el-card class="box-card ck-card-border0" shadow="never">
-            <el-image
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-              fit="scale-down">
-              <div slot="error" class="image-slot">
-                <i class="el-icon-picture-outline"></i>
-              </div>
-            </el-image>
-          </el-card>
-        </el-col>
       </el-row>
     </div>
 </template>

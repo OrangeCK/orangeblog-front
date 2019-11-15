@@ -20,6 +20,7 @@
               <el-menu-item index="/index/main1">处理中心</el-menu-item>
               <el-menu-item index="/index/main2">数据设置</el-menu-item>
               <el-menu-item index="/index/main3">测试中台</el-menu-item>
+              <el-menu-item index="/index/blogDetail">关于本站</el-menu-item>
             </el-menu>
         </div>
         </el-col>

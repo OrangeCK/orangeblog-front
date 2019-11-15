@@ -10,6 +10,7 @@
   font-size: 14px;
 }
 .ck-idx-head-main {
+  padding: 10px;
   font-size: 14px;
 }
 .ck-idx-head-aside {
@@ -29,7 +30,44 @@
   width: 100%;
   display: block;
 }
+.ck-card-title {
+  font-family: 'STXinwei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+.ck-card-outline {
+  font-family: 'STXinwei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
+}
+.ck-card-tag {
+  font-size: 12px;
+}
+.ck-card-tag .el-tag {
+  margin: 0 5px 5px 0;
+}
+.ck-card-tag .el-tag:last-child {
+  margin-right: 0;
+}
+.ck-card-tag2 {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.ck-card-tag2 .el-tag {
+  margin: 0 5px 5px 0;
+}
+.ck-card-tag2 .el-tag:last-child {
+  margin-right: 0;
+}
+.ck-card-blogDetail {
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
 /* 覆盖原生样式 */
+.el-col-20 {
+  width: 100%;
+}
+.el-col-16 {
+  width: 100%;
+}
 .el-col-14 {
   width: 100%;
 }
@@ -42,8 +80,14 @@
 .el-col-10 {
   width: 100%;
 }
+.el-col-8 {
+  width: 100%;
+}
 .el-col-6 {
   width: 70%;
+}
+.el-col-4 {
+  width: 100%;
 }
 .el-footer {
   padding: 10px 10px 10px 10px;

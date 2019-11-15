@@ -31,6 +31,40 @@
   width: 100%;
   display: block;
 }
+.ck-image-radius {
+  border-radius: 10px;
+}
+.ck-card-title {
+  font-family: 'STXinwei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+.ck-card-outline {
+  font-family: 'SimHei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
+}
+.ck-card-tag {
+  font-size: 14px;
+}
+.ck-card-tag .el-tag {
+  margin: 0 10px 10px 0;
+}
+.ck-card-tag .el-tag:last-child {
+  margin-right: 0;
+}
+.ck-card-tag2 {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.ck-card-tag2 .el-tag {
+  margin: 0 10px 0 0;
+}
+.ck-card-tag2 .el-tag:last-child {
+  margin-right: 0;
+}
+.ck-card-blogDetail {
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
 /* 覆盖原生样式 */
 .el-footer {
 padding: 10px 10px 10px 10px;
