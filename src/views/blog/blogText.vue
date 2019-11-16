@@ -5,8 +5,8 @@
 <script>
 import marked from 'marked'
 import hljs from 'highlight.js'
-// import javascript from 'highlight.js/lib/languages/javascript'
-import 'highlight.js/styles/monokai-sublime.css'
+import 'highlight.js/styles/monokai.css'
+import '../../common/css/markdown.css'
 var rendererMD = new marked.Renderer()
 marked.setOptions({
   renderer: rendererMD,
@@ -32,7 +32,8 @@ export default {
   },
   computed: {
     compiledMarkdown: function () {
-      return marked(this.markdownContent || '', { sanitize: true })
+      let html = marked(this.markdownContent || '', { sanitize: true })
+      return html.replace(/<code>/g, '<code class=\'hljs\'>')
     }
   },
   mounted () {
@@ -43,5 +44,5 @@ export default {
 </script>
 
 <style scoped>
-@import '../../common/css/markdown.css'
+/* @import '../../common/css/markdown.css' */
 </style>

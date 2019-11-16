@@ -76,6 +76,9 @@ padding: 0px;
   color: #333;
 }
 .el-main {
-color: #333;
+/* color: #333; */
 /* text-align: center; */
+}
+.hljs {
+  font-family: 'Consolas', 'Liberation Mono', Courier, monospace;
 }
