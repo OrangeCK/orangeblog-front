@@ -1,5 +1,4 @@
-# 使用itext把jsp页面（或静态html）转PDF文档
-## 起因任务中有一个难点是把一个打印页面自动给生成PDF文档，并且上传至服务器，然而公司框架只有手动上传文档
+## 起因
 这几天，任务中有一个难点是把一个打印页面自动给生成PDF文档，并且上传至服务器，然而公司框架只有手动上传文档，打印时可以保存为PDF在本地吧，所以感到很头疼，刚开始没有方向，所以只有surf the Internet了，网上看了很多资料，渐渐的从一点方向也不懂，到慢慢开始了解怎么着手去做，废话就不说了
 ## 准备
 公司项目用比较老，只能手动导jar包，网上大概介绍的三种方式：==Jasper Report== 、 ==iText== 、 ==flying sauser== jasper 
@@ -9,7 +8,7 @@ report和flying sauser感觉上要比iText的实现要强大一点，但是我�
 - xmlworker-5.5.4、
 - jsoup-1.10.2（此包是java的html解析器）
 
-## PDF的生成工具类
+## PDF生成工具类
 1、CreatePdfDocument.java
 现在直接上代码工具类，因为太长，所以我分段来写：
 使用的类
@@ -142,7 +141,7 @@ public class AsianFontProvider extends XMLWorkerFontProvider{
     }
 }
 ```
-## 测试调用PDF生成工具类
+## 测试工具类
 ```
 public static void main(String[] args) throws Exception {
     // 网页必须是可以直接访问的URL,
@@ -160,7 +159,7 @@ public static void main(String[] args) throws Exception {
 实现后效果如图
 ![20171103113806104.png](http://2019-2-16-ck.oss-cn-beijing.aliyuncs.com/lmsystem/20171103113806104.png)
 
-## 调研中的注意事项
+## 调研中注意事项
 - 前面说过iText对html的样式支持的很少，所以生成的pdf文档比较简单，jtext-asian-5.2.0、itextpdf-5.5.1、xmlworker-5.5.4,这三个jar是我在网上找的支持table标签的，（刚开始找的低版本的jar不支持table,所以我的表格出不来），还有就是AsianFontProvider.java这个类对中文的支持，因为iText的XMLWorkerHelper.getInstance().parseXHtml转PDF的时候，中文不显示
 - （网上说是什么没有默认的中文字体,我看网上有人修改xmlworker源码的，使其默认一个字体）,但是我没有成功，机缘巧合之下我找到了这种不用修改源码的就像这样
 

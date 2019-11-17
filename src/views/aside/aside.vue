@@ -3,7 +3,7 @@
       <el-row>
         <el-col :span="24">
           <div class="ck-avatar-img">
-              <el-avatar shape="square" fit="scale-down" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+              <el-avatar shape="square" fit="scale-down"  src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
               <div class="sub-title">栗子味橙子</div>
           </div>
         </el-col>
@@ -73,6 +73,8 @@ export default {
 <style lang="less" scoped>
 .ck-avatar-img {
   text-align: center;
+  // background-image: url(../../assets/touxiang2-1.png);
+  // background-repeat:no-repeat;
 }
 .ck-aside-div-pd10 {
   padding: 10px;

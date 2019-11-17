@@ -19,12 +19,12 @@
                 <div class="ck-card-title">Mybatis-Plus的使用（一）：初识Mybatis-Plus</div>
                 <p class="ck-card-outline">Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人</p>
                 <div class="ck-card-tag">
-                  <el-tag type="warning" effect="dark">栗子生活</el-tag>
-                  <el-tag type="warning">栗子厨房</el-tag>
-                  <el-tag type="info" effect="plain">阅读 99</el-tag>
-                  <el-tag type="info" effect="plain">喜欢 9</el-tag>
-                  <el-tag type="info" effect="plain">作者 橙子</el-tag>
-                  <el-tag type="info" effect="plain">2019-11-15 11:18:22</el-tag>
+                  <el-tag size="small" type="warning" effect="dark">栗子生活</el-tag>
+                  <el-tag size="small" type="warning">栗子厨房</el-tag>
+                  <el-tag size="small" type="info" effect="plain">阅读 99</el-tag>
+                  <el-tag size="small" type="info" effect="plain">喜欢 9</el-tag>
+                  <el-tag size="small" type="info" effect="plain">作者 橙子</el-tag>
+                  <el-tag size="small" type="info" effect="plain">2019-11-15 11:18:22</el-tag>
                 </div>
               </el-col>
             </el-row>
@@ -39,12 +39,12 @@
                 <div class="ck-card-title">Mybatis-Plus的使用（一）：初识Mybatis-Plus</div>
                 <p class="ck-card-outline">Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人</p>
                 <div class="ck-card-tag">
-                  <el-tag type="warning" effect="dark">栗子生活</el-tag>
-                  <el-tag type="warning">栗子厨房</el-tag>
-                  <el-tag type="info" effect="plain">阅读 99</el-tag>
-                  <el-tag type="info" effect="plain">喜欢 9</el-tag>
-                  <el-tag type="info" effect="plain">作者 橙子</el-tag>
-                  <el-tag type="info" effect="plain">2019-11-15 11:18:22</el-tag>
+                  <el-tag size="small" type="warning" effect="dark">栗子生活</el-tag>
+                  <el-tag size="small" type="warning">栗子厨房</el-tag>
+                  <el-tag size="small" type="info" effect="plain">阅读 99</el-tag>
+                  <el-tag size="small" type="info" effect="plain">喜欢 9</el-tag>
+                  <el-tag size="small" type="info" effect="plain">作者 橙子</el-tag>
+                  <el-tag size="small" type="info" effect="plain">2019-11-15 11:18:22</el-tag>
                 </div>
               </el-col>
               <el-col :span="8">

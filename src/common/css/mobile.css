@@ -33,6 +33,9 @@
 .ck-card-title {
   font-family: 'STXinwei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
   font-size: 24px;
+  /* background-image: url(../../assets/titlebg2_5.png);
+  background-repeat:no-repeat;
+  background-size: 100%; */
 }
 .ck-card-outline {
   font-family: 'STXinwei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;

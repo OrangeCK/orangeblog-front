@@ -6,12 +6,12 @@
           <span>Mybatis-Plus的使用（一）：初识Mybatis-Plus</span>
         </div>
         <div class="ck-card-tag2">
-          <el-tag type="warning" effect="dark">栗子生活</el-tag>
-          <el-tag type="warning">栗子厨房</el-tag>
-          <el-tag type="info" effect="plain">阅读 99</el-tag>
-          <el-tag type="info" effect="plain">喜欢 9</el-tag>
-          <el-tag type="info" effect="plain">作者 橙子</el-tag>
-          <el-tag type="info" effect="plain">2019-11-15 11:18:22</el-tag>
+          <el-tag size="mini" type="warning" effect="dark">栗子生活</el-tag>
+          <el-tag size="mini" type="warning">栗子厨房</el-tag>
+          <el-tag size="mini" type="info" effect="plain">阅读 99</el-tag>
+          <el-tag size="mini" type="info" effect="plain">喜欢 9</el-tag>
+          <el-tag size="mini" type="info" effect="plain">作者 橙子</el-tag>
+          <el-tag size="mini" type="info" effect="plain">2019-11-15 11:18:22</el-tag>
         </div>
       </div>
       <div>
