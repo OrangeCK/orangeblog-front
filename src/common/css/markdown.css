@@ -66,42 +66,48 @@ pre table{
 =============================================================================*/
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 10px;
+  margin: 10px 0 10px 0;
   padding: 0;
   font-weight: bold;
+  /* 抗锯齿渲染 对字体进行抗锯齿渲染可以使字体看起来会更清晰舒服 */
   -webkit-font-smoothing: antialiased;
 }
 
 h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  /* 集成父元素的字体大小 */
   font-size: inherit;
 }
 h1 {
-  font-size: 1.6em;
+  font-size: 24px;
   color: #000000;
 }
 h2 {
-  font-size: 1.3em;
-  color: #fff;
+  font-size: 20px;
+  /* color: #fff; */
   border-left: 4px solid #33caff;
-  border-bottom: 4px solid #0f6e90;
-  background: linear-gradient(to top right,#2689c1, #2689c1, #2689c1, #2689c1)!important;
-  background-color: rgb(0, 127, 189);
+  /* border-bottom: 4px solid #0f6e90; */
+  /* background: linear-gradient(to top right,#2689c1, #2689c1, #2689c1, #2689c1)!important; */
+  /* background-color: rgb(0, 127, 189); */
   border-radius: 5px;
-  padding: 0.2em 0.5em;
+  padding: 3px 8px;
+  padding: 0px 0px 0px 23px;
+  background-image: url(../../assets/xiaotubiao.gif);
+  background-repeat:no-repeat;
+  margin-left:0.33em;
 }
 h3 {
-  font-size: 1.2em;
+  font-size: 19px;
 }
 h4 {
-  font-size: 1.1em;
+  font-size: 17px;
   color: #000000;
 }
 h5 {
-  font-size: 1.0em;
+  font-size: 16px;
   color: #000000;
 }
 h6 {
-  font-size: 0.9em;
+  font-size: 14px;
   color: #000000;
 }
 
@@ -293,7 +299,7 @@ img {
 /* P
 =============================================================================*/
 p{
-	font-size:1.0em;
+	font-size: 16px;
 }
 
 #outline-list {

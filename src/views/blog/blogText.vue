@@ -5,7 +5,7 @@
 <script>
 import marked from 'marked'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/monokai.css'
+import 'highlight.js/styles/monokai-sublime.css'
 import '../../common/css/markdown.css'
 var rendererMD = new marked.Renderer()
 marked.setOptions({
