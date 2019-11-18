@@ -1,12 +1,12 @@
 <template>
-  <div v-html="compiledMarkdown"></div>
+  <div id="markdown" v-html="compiledMarkdown"></div>
 </template>
 
 <script>
 import marked from 'marked'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
-import '../../common/css/markdown.css'
+// import '../../common/css/markdown.css'
 var rendererMD = new marked.Renderer()
 marked.setOptions({
   renderer: rendererMD,
@@ -43,6 +43,6 @@ export default {
 }
 </script>
 
-<style scoped>
-/* @import '../../common/css/markdown.css' */
+<style lang="less" scoped>
+@import '../../common/css/markdown.css';
 </style>

@@ -4,10 +4,11 @@
 /* 自定义样式 */
 .ck-aside {
   display: none;
-  width: 200px !important;
+  /* width: 200px !important; */
 }
 .ck-idx-head-header {
   font-size: 14px;
+  height: 70px;
 }
 .ck-idx-head-main {
   padding: 10px;
@@ -15,6 +16,9 @@
 }
 .ck-idx-head-aside {
   font-size: 12px;
+}
+.ck-idx-head-aside ol {
+  padding: 0 0 0 20px;
 }
 .ck-idx-head-footer {
   font-size: 10px;

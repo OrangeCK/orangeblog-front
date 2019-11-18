@@ -1,7 +1,7 @@
 <template>
     <el-container>
         <el-container>
-          <el-header height="70px" class="ck-idx-head-header">
+          <el-header class="ck-idx-head-header">
             <Header :msg='mainMenun'></Header>
           </el-header>
           <el-main class="ck-idx-head-main">

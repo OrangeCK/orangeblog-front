@@ -8,6 +8,18 @@ report和flying sauser感觉上要比iText的实现要强大一点，但是我�
 - xmlworker-5.5.4、
 - jsoup-1.10.2（此包是java的html解析器）
 
+|材料|分量|
+|-|-|
+|白糖|一茶匙|
+|葱姜蒜|大葱半根，切段；姜切片，蒜5-6颗|
+|香叶，八角，小茴香，胡椒|香叶两片，八角一颗，小茴香一小撮，胡椒5-6粒|
+|豆瓣酱|一大勺|
+|干辣椒|8个|
+|花椒|10来粒|
+|鸡腿|3个|
+|土豆|3个|
+|大青椒|2个|
+
 ## PDF生成工具类
 1、CreatePdfDocument.java
 现在直接上代码工具类，因为太长，所以我分段来写：
@@ -60,7 +72,7 @@ public static String parseURL2PDFFile(String pdfFile, String html) {
 ```
 extractHtmlInfo方法
 ```
-/**
+    /**
      * 根据URL提前blog的基本信息，返回结果
      * @param URL 例：http://localhost:8080/scm/scm/po/gather/pdftest/pdftesthtml3.html(能直接返回某个html的URL,
      *            我开始传url时候被struts1拦截了，应为get不到session的登录人信息,所以得到的是登录页面的html)
@@ -82,7 +94,7 @@ extractHtmlInfo方法
 ```
 extractHtmlInfo2方法，
 ```
-/**
+    /**
      * 直接通过得到html来取得想要的部分html
      * @param html
      * @return
@@ -100,7 +112,7 @@ extractHtmlInfo2方法，
 ```
 parse2Stream方法
 ```
-/**
+    /**
      * 把String 转为 InputStream
      * @param content
      * @return
@@ -157,7 +169,7 @@ public static void main(String[] args) throws Exception {
 }
 ```
 实现后效果如图
-![20171103113806104.png](http://2019-2-16-ck.oss-cn-beijing.aliyuncs.com/lmsystem/20171103113806104.png)
+![20171103113806104.png](https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg)
 
 ## 调研中注意事项
 - 前面说过iText对html的样式支持的很少，所以生成的pdf文档比较简单，jtext-asian-5.2.0、itextpdf-5.5.1、xmlworker-5.5.4,这三个jar是我在网上找的支持table标签的，（刚开始找的低版本的jar不支持table,所以我的表格出不来），还有就是AsianFontProvider.java这个类对中文的支持，因为iText的XMLWorkerHelper.getInstance().parseXHtml转PDF的时候，中文不显示

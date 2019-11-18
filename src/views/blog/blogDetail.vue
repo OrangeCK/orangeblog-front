@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: -10px;">
+  <div style="margin-right: -10px;margin-left: -10px;">
     <el-card class="ck-card-blogDetail">
       <div slot="header">
         <div class="ck-card-title">
