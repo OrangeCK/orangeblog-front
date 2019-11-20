@@ -19,7 +19,7 @@
               active-text-color="#ffd04b">
               <el-menu-item index="/index/main1">处理中心</el-menu-item>
               <el-menu-item index="/index/main2">数据设置</el-menu-item>
-              <!-- <el-menu-item index="/index/main3">测试中台</el-menu-item> -->
+              <el-menu-item index="/index/main3">发布历史</el-menu-item>
               <el-menu-item index="/index/blogDetail">关于本站</el-menu-item>
             </el-menu>
         </div>
@@ -58,7 +58,7 @@ export default {
   data () {
     return {
       drawer: false,
-      size: '50%',
+      size: '70%',
       showClose: false,
       direction: 'ltr',
       activeIndex2: this.$store.state.activeMenu,

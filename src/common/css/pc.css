@@ -19,6 +19,9 @@
   line-height: 22px;
   font-size: 14px;
 }
+.ck-idx-head-aside .el-card__body{
+  padding: 10px;
+}
 .ck-idx-head-aside ol {
   padding: 0 0 0 20px;
 }

@@ -1,35 +1,29 @@
 <template>
     <div>
-        <div>
-          <el-row :gutter="20">
-            <el-col :span="11" v-for="(o, index) in 7" :key="o" >
-              <div v-if="index%2 !== 0" class="grid-content bg-purple">
-                <el-card class="box-card" shadow="hover">
-                  <el-row :gutter="20">
-                    <el-col :span="10">
-                      <img src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" class="ck-image">
-                    </el-col>
-                    <el-col :span="14">
-                      Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人
-                    </el-col>
-                  </el-row>
-                </el-card>
-              </div>
-              <div v-if="index%2 === 0" class="grid-content bg-purple">
-                <el-card class="box-card" shadow="hover">
-                  <el-row :gutter="20">
-                    <el-col :span="10">
-                      <img src="https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg" class="ck-image">
-                    </el-col>
-                    <el-col :span="14">
-                      Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人
-                    </el-col>
-                  </el-row>
-                </el-card>
-              </div>
-            </el-col>
-          </el-row>
-        </div>
+      <el-row type="flex" justify="center">
+        <el-col :span="16">
+          <el-timeline>
+            <el-timeline-item timestamp="2018/4/12" placement="top">
+              <el-card>
+                <h4>发布版本 V1.0.0</h4>
+                <p>王小虎 提交于 2018/4/12 20:46</p>
+              </el-card>
+            </el-timeline-item>
+            <el-timeline-item timestamp="2018/4/3" placement="top">
+              <el-card>
+                <h4>发布版本 V1.2.0</h4>
+                <p>王小虎 提交于 2018/4/3 20:46</p>
+              </el-card>
+            </el-timeline-item>
+            <el-timeline-item timestamp="2018/4/2" placement="top">
+              <el-card>
+                <h4>发布版本 V2.0.0</h4>
+                <p>王小虎 提交于 2018/4/2 20:46</p>
+              </el-card>
+            </el-timeline-item>
+          </el-timeline>
+        </el-col>
+      </el-row>
     </div>
 </template>
 
