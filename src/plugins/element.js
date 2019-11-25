@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import 'element-ui/lib/theme-chalk/base.css'
 import CollapseTransition from 'element-ui/lib/transitions/collapse-transition'
-import { Link, Timeline, TimelineItem, Icon, Calendar, Image, Progress, Input, Tabs, TabPane, Tag, Menu, Submenu, MenuItem, MenuItemGroup, Button, Table, TableColumn, Pagination, Dialog, Select, Option, Container, Header, Main, Footer, Aside, Drawer, Avatar, Row, Col, Card, Divider, Dropdown, DropdownMenu, DropdownItem } from 'element-ui'
+import { Collapse, CollapseItem, Backtop, Link, Timeline, TimelineItem, Icon, Calendar, Image, Progress, Input, Tabs, TabPane, Tag, Menu, Submenu, MenuItem, MenuItemGroup, Button, Table, TableColumn, Pagination, Dialog, Select, Option, Container, Header, Main, Footer, Aside, Drawer, Avatar, Row, Col, Card, Divider, Dropdown, DropdownMenu, DropdownItem } from 'element-ui'
 
 Vue.component(CollapseTransition.name, CollapseTransition)
 Vue.use(Button)
@@ -40,3 +40,6 @@ Vue.use(Icon)
 Vue.use(Timeline)
 Vue.use(TimelineItem)
 Vue.use(Link)
+Vue.use(Backtop)
+Vue.use(Collapse)
+Vue.use(CollapseItem)

@@ -1,24 +1,26 @@
 <template>
+  <div class="ck-index-layout">
     <el-container>
-        <el-container>
-          <el-header class="ck-idx-head-header">
-            <Header :msg='mainMenun'></Header>
-          </el-header>
-          <el-main class="ck-idx-head-main">
-            <div class="ck-main-div">
-              <transition name="slide-fade" mode="out-in">
-                <router-view />
-              </transition>
-            </div>
-          </el-main>
-          <el-footer class="ck-idx-head-footer">
-              <Footer :msg='mainMenun'></Footer>
-          </el-footer>
-        </el-container>
-        <el-aside class="ck-aside ck-idx-head-aside">
-          <Aside :msg='mainMenun' ></Aside>
-        </el-aside>
+      <el-container>
+        <el-header class="ck-idx-head-header">
+          <Header :msg='mainMenun'></Header>
+        </el-header>
+        <el-main class="ck-idx-head-main">
+          <div class="ck-main-div">
+            <transition name="slide-fade" mode="out-in">
+              <router-view />
+            </transition>
+          </div>
+        </el-main>
+        <el-footer class="ck-idx-head-footer">
+            <Footer :msg='mainMenun'></Footer>
+        </el-footer>
+      </el-container>
+      <el-aside class="ck-aside ck-idx-head-aside">
+        <Aside :msg='mainMenun' ></Aside>
+      </el-aside>
     </el-container>
+  </div>
 </template>
 
 <script>

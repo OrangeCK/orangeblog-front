@@ -1,4 +1,10 @@
-#app {
+/* #app {
+  max-width: 1366px;
+  min-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.ck-index-layout {
   max-width: 1366px;
   min-width: 1000px;
   margin-left: auto;
@@ -97,6 +103,10 @@ padding: 0px;
 /* color: #333; */
 /* text-align: center; */
 }
+.el-link {
+  font-size: 14px;
+}
 .hljs {
   font-family: 'Consolas', 'Liberation Mono', Courier, monospace;
 }
+

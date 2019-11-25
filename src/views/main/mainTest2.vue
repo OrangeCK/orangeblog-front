@@ -3,22 +3,18 @@
       <el-row type="flex" justify="center">
         <el-col :span="16">
           <el-timeline>
-            <el-timeline-item timestamp="2018/4/12" placement="top">
+            <el-timeline-item
+              v-for="(activity, index) in activities"
+              :key="index"
+              :icon="activity.icon"
+              :type="activity.type"
+              :color="activity.color"
+              :size="activity.size"
+              :timestamp="activity.timestamp"
+              placement="top">
               <el-card>
-                <h4>发布版本 V1.0.0</h4>
-                <p>王小虎 提交于 2018/4/12 20:46</p>
-              </el-card>
-            </el-timeline-item>
-            <el-timeline-item timestamp="2018/4/3" placement="top">
-              <el-card>
-                <h4>发布版本 V1.2.0</h4>
-                <p>王小虎 提交于 2018/4/3 20:46</p>
-              </el-card>
-            </el-timeline-item>
-            <el-timeline-item timestamp="2018/4/2" placement="top">
-              <el-card>
-                <h4>发布版本 V2.0.0</h4>
-                <p>王小虎 提交于 2018/4/2 20:46</p>
+                <h4>{{activity.title}}</h4>
+                <p>{{activity.content}}</p>
               </el-card>
             </el-timeline-item>
           </el-timeline>
@@ -36,8 +32,28 @@ export default {
   data () {
     return {
       footerText: 'Kang Chen`s Header!',
-      show: true,
-      show2: true
+      activities: [{
+        title: '发布版本 V1.0.0',
+        content: '王小虎 提交于 2018/4/2 20:46',
+        timestamp: '2018-04-12 20:46',
+        size: 'large',
+        type: 'primary',
+        icon: 'el-icon-more'
+      }, {
+        title: '发布版本 V1.2.0',
+        content: '王小虎 提交于 2018/4/2 20:46',
+        timestamp: '2018-04-03 20:46',
+        color: '#0bbd87'
+      }, {
+        title: '发布版本 V2.1.0',
+        content: '王小虎 提交于 2018/4/2 20:46',
+        timestamp: '2018-04-03 20:46',
+        size: 'large'
+      }, {
+        title: '发布版本 V2.0.0',
+        content: '王小虎 提交于 2018/4/2 20:46',
+        timestamp: '2018-04-03 20:46'
+      }]
     }
   },
   computed: {

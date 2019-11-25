@@ -27,7 +27,7 @@
         <el-col :span="24">
           <el-card class="box-card ck-card-border0" shadow="always">
             <el-row :gutter="10">
-              <el-col :span="12">
+              <el-col style="width: 50%">
                 <div style="text-align: center;">微信</div>
                 <el-image
                   src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
@@ -37,7 +37,7 @@
                   </div>
                 </el-image>
               </el-col>
-              <el-col :span="12">
+              <el-col style="width: 50%">
                 <div style="text-align: center;">支付宝</div>
                 <el-image
                   src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"

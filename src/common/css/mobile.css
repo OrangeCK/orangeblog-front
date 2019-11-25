@@ -1,4 +1,7 @@
-#app {
+/* #app {
+  min-width: unset;
+} */
+.ck-index-layout {
   min-width: unset;
 }
 /* 自定义样式 */
@@ -111,5 +114,8 @@
 .el-main {
   color: #333;
   /* text-align: center; */
+}
+.el-link {
+  font-size: 12px;
 }
   

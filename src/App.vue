@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" class="ck-back-top">
+    <template>
+      <el-backtop target=".ck-back-top"></el-backtop>
+    </template>
     <!-- <img src="./assets/logo.png"> -->
     <transition name="el-zoom-in-center" mode="out-in">
       <router-view />
@@ -27,8 +30,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   margin-top: 0px;
-  max-width: 1366px;
-  min-width: 1000px;
+  background-color: #efe3e3;
+  height: 100vh;
+  overflow: auto;
 }
 .el-drawer__header {
   margin-bottom: 0px !important;
