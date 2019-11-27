@@ -21,14 +21,56 @@
         <el-collapse accordion>
           <el-collapse-item>
             <template slot="title">
-             留言板<i class="header-icon el-icon-info"></i>
+             留言板<i class="el-icon-s-comment"></i>
             </template>
-            <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
-            <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
+            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="80px" class="demo-ruleForm">
+              <el-form-item label="昵称" prop="name">
+                <el-input v-model="ruleForm.name"></el-input>
+              </el-form-item>
+              <el-form-item label="Email" prop="email">
+                <el-input v-model="ruleForm.email"></el-input>
+              </el-form-item>
+              <el-form-item>
+                <el-switch
+                  v-model="ruleForm.sex"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949"
+                  active-text="靓仔"
+                  inactive-text="淑女">
+                </el-switch>
+              </el-form-item>
+              <el-form-item label="您的留言" prop="message">
+                <el-input type="textarea" v-model="ruleForm.message"></el-input>
+              </el-form-item>
+              <el-form-item>
+                <el-button size="small" type="primary" @click="submitForm('ruleForm')">提交</el-button>
+                <el-button size="small" @click="resetForm('ruleForm')">重置</el-button>
+              </el-form-item>
+            </el-form>
           </el-collapse-item>
-          <el-collapse-item title="历史留言">
-            <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；</div>
-            <div>页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。</div>
+          <el-collapse-item>
+            <template slot="title">
+             历史留言<i class="el-icon-s-operation"></i>
+            </template>
+            <div v-for="o in 3" :key="o">
+              <el-row>
+                <el-col style="width:25%;">
+                  <el-avatar shape="square" fit="scale-down" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+                </el-col>
+                <el-col style="width:75%;">
+                  <p>这条评论是非常的额棒的</p>
+                </el-col>
+              </el-row>
+              <el-divider></el-divider>
+            </div>
+            <div>
+              <el-pagination
+                :page-size="20"
+                :pager-count="4"
+                layout="prev, pager, next"
+                :total="268">
+              </el-pagination>
+            </div>
           </el-collapse-item>
         </el-collapse>
       </div>
@@ -48,7 +90,25 @@ export default {
   },
   data () {
     return {
-      input: ''
+      input: '',
+      ruleForm: {
+        name: '',
+        email: '',
+        sex: true,
+        message: ''
+      },
+      rules: {
+        name: [
+          { required: true, message: '请输入昵称', trigger: 'blur' },
+          { min: 2, max: 7, message: '长度在 2 到 7 个字符', trigger: 'blur' }
+        ],
+        email: [
+          { required: false, message: '请输入邮箱地址', trigger: 'blur' }
+        ],
+        message: [
+          { required: true, message: '请留下你想说的话', trigger: 'blur' }
+        ]
+      }
     }
   },
   computed: {
@@ -68,6 +128,19 @@ export default {
         // let markdown = res.data
         this.input = res.data
       })
+    },
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          alert('submit!')
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
+    },
+    resetForm (formName) {
+      this.$refs[formName].resetFields()
     }
   }
 }

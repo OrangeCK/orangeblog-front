@@ -8,6 +8,8 @@ report和flying sauser感觉上要比iText的实现要强大一点，但是我�
 - xmlworker-5.5.4、
 - jsoup-1.10.2（此包是java的html解析器）
 
+> 注意：白糖不能加太多，以免太甜
+
 |材料|分量|
 |-|-|
 |白糖|一茶匙|

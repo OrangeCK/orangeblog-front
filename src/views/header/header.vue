@@ -16,7 +16,7 @@
                 <el-menu-item index="/index/main1">处理中心</el-menu-item>
                 <el-menu-item index="/index/main2">数据设置</el-menu-item>
                 <el-menu-item index="/index/main3">发布历史</el-menu-item>
-                <el-menu-item index="/index/blogDetail/123456789">关于本站</el-menu-item>
+                <!-- <el-menu-item index="/index/blogDetail/123456789">关于本站</el-menu-item> -->
               </el-menu>
           </div>
           </el-col>
@@ -55,7 +55,7 @@
                   <el-dropdown-item command="/index/main1">黄金糕</el-dropdown-item>
                   <el-dropdown-item command="/index/main2">狮子头</el-dropdown-item>
                   <el-dropdown-item command="/index/main3">螺蛳粉</el-dropdown-item>
-                  <el-dropdown-item command="/index/blogDetail/123456789">螺蛳粉</el-dropdown-item>
+                  <!-- <el-dropdown-item command="/index/blogDetail/123456789">螺蛳粉</el-dropdown-item> -->
                 </el-dropdown-menu>
               </el-dropdown>
               </div>

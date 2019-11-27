@@ -4,7 +4,7 @@
       <el-col v-if="index%2 !== 0" :span="20">
         <div class="grid-content bg-purple">
           <el-card class="box-card" shadow="hover">
-            <el-row :gutter="20">
+            <el-row :gutter="20" @click="jumpToDetail('12345678')">
               <el-col :span="8">
                 <el-image
                   class="ck-image-radius"
@@ -16,8 +16,8 @@
                 </el-image>
               </el-col>
               <el-col :span="16">
-                <div class="ck-card-title">Mybatis-Plus的使用（一）：初识Mybatis-Plus</div>
-                <p class="ck-card-outline">Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人</p>
+                <el-link type="warning"><div class="ck-card-title" @click="jumpToDetail(12345678)">Mybatis-Plus的使用（一）：初识Mybatis-Plus</div></el-link>
+                <p class="ck-card-outline">Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人...</p>
                 <div class="ck-card-tag">
                   <el-tag size="small" type="warning" effect="dark">栗子生活</el-tag>
                   <el-tag size="small" type="warning">栗子厨房</el-tag>
@@ -32,12 +32,12 @@
         </div>
       </el-col>
       <el-col v-if="index%2 === 0" :span="20">
-        <div class="grid-content bg-purple">
-          <el-card class="box-card" shadow="hover">
+        <div class="grid-content bg-purple" >
+          <el-card class="box-card" shadow="hover" >
             <el-row :gutter="20">
               <el-col :span="16">
-                <div class="ck-card-title">Mybatis-Plus的使用（一）：初识Mybatis-Plus</div>
-                <p class="ck-card-outline">Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人</p>
+                <el-link type="warning"><div class="ck-card-title" @click="jumpToDetail(12345678)">Mybatis-Plus的使用（一）：初识Mybatis-Plus</div></el-link>
+                <p class="ck-card-outline">Element（元素）是MUGEN游戏中的核心剧情人物与最终BOSS，最有辨识性的八神庵克隆个体，与Gustab.m和Psyqhical同为早期拳皇MUGEN作品里著名的原创魔改人...</p>
                 <div class="ck-card-tag">
                   <el-tag size="small" type="warning" effect="dark">栗子生活</el-tag>
                   <el-tag size="small" type="warning">栗子厨房</el-tag>
@@ -62,6 +62,17 @@
         </div>
       </el-col>
     </el-row>
+    <el-row type="flex" justify="center">
+      <el-col :span="20" style="text-align:right;">
+        <el-pagination
+          small
+          background
+          :page-size="20"
+          layout="prev, pager, next"
+          :total="2683">
+        </el-pagination>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -83,6 +94,9 @@ export default {
   mounted () {
   },
   methods: {
+    jumpToDetail (id) {
+      this.$router.push({ path: '/index/blogDetail/' + id })
+    }
     // clickButton () {
     //   this.$store.commit('SET_ActiveName', this.msg)
     // }

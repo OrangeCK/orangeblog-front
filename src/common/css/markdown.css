@@ -26,6 +26,13 @@ p, blockquote, ul, ol, dl, pre {
   margin: 15px 0;
 }
 
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  background-color: #f5f5f5;
+  color: #777;
+}
+
 /* HEADERS
 =============================================================================*/
 

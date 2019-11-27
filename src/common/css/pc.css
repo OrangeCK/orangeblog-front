@@ -51,6 +51,7 @@
 .ck-card-title {
   font-family: 'STXinwei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
   font-size: 24px;
+  cursor: pointer;
 }
 .ck-card-outline {
   font-family: 'SimHei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
