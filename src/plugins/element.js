@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import 'element-ui/lib/theme-chalk/base.css'
 import CollapseTransition from 'element-ui/lib/transitions/collapse-transition'
-import { Radio, RadioGroup, Switch, Form, FormItem, Collapse, CollapseItem, Backtop, Link, Timeline, TimelineItem, Icon, Calendar, Image, Progress, Input, Tabs, TabPane, Tag, Menu, Submenu, MenuItem, MenuItemGroup, Button, Table, TableColumn, Pagination, Dialog, Select, Option, Container, Header, Main, Footer, Aside, Drawer, Avatar, Row, Col, Card, Divider, Dropdown, DropdownMenu, DropdownItem } from 'element-ui'
+import { Notification, Loading, Radio, RadioGroup, Switch, Form, FormItem, Collapse, CollapseItem, Backtop, Link, Timeline, TimelineItem, Icon, Calendar, Image, Progress, Input, Tabs, TabPane, Tag, Menu, Submenu, MenuItem, MenuItemGroup, Button, Table, TableColumn, Pagination, Dialog, Select, Option, Container, Header, Main, Footer, Aside, Drawer, Avatar, Row, Col, Card, Divider, Dropdown, DropdownMenu, DropdownItem } from 'element-ui'
 
 Vue.component(CollapseTransition.name, CollapseTransition)
+
 Vue.use(Button)
 Vue.use(Table)
 Vue.use(Dialog)
@@ -48,3 +49,6 @@ Vue.use(FormItem)
 Vue.use(Radio)
 Vue.use(RadioGroup)
 Vue.use(Switch)
+Vue.use(Loading)
+
+Vue.prototype.$notify = Notification

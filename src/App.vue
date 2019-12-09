@@ -1,7 +1,22 @@
 <template>
   <div id="app" class="ck-back-top">
     <template>
-      <el-backtop target=".ck-back-top"></el-backtop>
+      <el-backtop target=".ck-back-top">
+        <!-- <div
+          style="{
+            height: 100%;
+            width: 100%;
+            background-color: #f2f5f6;
+            box-shadow: 0 0 6px rgba(0,0,0, .12);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 30px
+            color: #1989fa;
+          }"
+        >
+           <i class="el-icon-arrow-up"></i>
+        </div> -->
+      </el-backtop>
     </template>
     <!-- <img src="./assets/logo.png"> -->
     <transition name="el-zoom-in-center" mode="out-in">
@@ -13,11 +28,14 @@
 <script>
 export default {
   created: function () {
-    // console.log('clientWidth', document.documentElement.clientWidth)
-    if (document.documentElement.clientWidth > 768) {
-      require('./common/css/pc.css')
+    console.log('clientWidth', document.documentElement.clientWidth)
+    let clientWidth = document.documentElement.clientWidth
+    if (clientWidth > 768) {
+      console.log('clientWidth-pc', clientWidth)
+      require('@/common/css/pc.css')
     } else {
-      require('./common/css/mobile.css')
+      console.log('clientWidth-mobile', clientWidth)
+      require('@/common/css/mobile.css')
     }
   }
 }

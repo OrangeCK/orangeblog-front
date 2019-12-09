@@ -62,18 +62,6 @@
         </div>
       </el-col>
     </el-row>
-    <el-row type="flex" justify="center">
-      <el-col :span="20" style="text-align:right;">
-        <el-pagination
-          small
-          background
-          @current-change="getBlogCards"
-          layout="prev, pager, next"
-          :page-size="blogCard.pageSize"
-          :total="blogCard.total">
-        </el-pagination>
-      </el-col>
-    </el-row>
   </div>
 </template>
 
@@ -89,34 +77,30 @@ export default {
       fullscreenLoading: true,
       blogCard: {
         data: [],
-        pageIndex: 1,
-        total: 0,
-        pageSize: 5
+        searchStr: ''
       }
     }
   },
   computed: {
   },
   mounted () {
-    this.getBlogCards(this.blogCard.pageIndex)
+    this.searchBlog()
+  },
+  created () {
+    this.searchStr = this.$route.params.str
   },
   methods: {
     jumpToDetail (id) {
       this.$router.push({ path: '/index/blogDetail/' + id })
     },
-    getBlogCards (index) {
+    searchBlog () {
       let loadingInstance = this.$loading(Global.options)
       this.service({
-        url: this.API.listBlogCardPage,
-        method: 'post',
-        data: {
-          'pageIndex': index,
-          'pageSize': this.blogCard.pageSize
-        }
+        url: this.API.searchBlogs + '?searchStr=' + this.searchStr,
+        method: 'post'
       }).then(res => {
         let data = res.data.data
-        this.blogCard.data = data.records
-        this.blogCard.total = data.total
+        this.blogCard.data = data
         loadingInstance.close()
       }).catch(() => {
         loadingInstance.close()

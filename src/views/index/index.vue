@@ -3,7 +3,7 @@
     <el-container>
       <el-container>
         <el-header class="ck-idx-head-header">
-          <Header :msg='mainMenun'></Header>
+          <Header></Header>
         </el-header>
         <el-main class="ck-idx-head-main">
           <div class="ck-main-div">
@@ -13,11 +13,11 @@
           </div>
         </el-main>
         <el-footer class="ck-idx-head-footer">
-            <Footer :msg='mainMenun'></Footer>
+          <Footer></Footer>
         </el-footer>
       </el-container>
       <el-aside class="ck-aside ck-idx-head-aside">
-        <Aside :msg='mainMenun' ></Aside>
+        <Aside></Aside>
       </el-aside>
     </el-container>
   </div>

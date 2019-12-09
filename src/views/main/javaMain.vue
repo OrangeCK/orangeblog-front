@@ -89,6 +89,7 @@ export default {
       fullscreenLoading: true,
       blogCard: {
         data: [],
+        parentCategoryId: 'java',
         pageIndex: 1,
         total: 0,
         pageSize: 5
@@ -111,7 +112,8 @@ export default {
         method: 'post',
         data: {
           'pageIndex': index,
-          'pageSize': this.blogCard.pageSize
+          'pageSize': this.blogCard.pageSize,
+          'parentCategoryId': this.blogCard.parentCategoryId
         }
       }).then(res => {
         let data = res.data.data

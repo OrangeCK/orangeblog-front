@@ -217,9 +217,9 @@ pre tt {
 #markdown table th {
   font-weight: bold;
   border: 1px solid #282828;
-  color: #ffffff;
+  color: #000000;
   padding: 5px 10px;
-  background-color: #dec673;
+  background-color: #fffbea;
 }
 
 #markdown table th, #markdown table td {

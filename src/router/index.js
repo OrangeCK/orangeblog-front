@@ -13,28 +13,37 @@ const routes = [
   {
     path: '/index',
     name: 'Index',
-    component: () => import('@/views/index/index.vue'),
+    component: () => import('../views/index/index.vue'),
     // redirect: '/index/main1',
     children: [
       {
         path: '/',
-        name: 'Main0',
         component: () => import('../views/main/main.vue')
       },
       {
-        path: 'main1',
-        name: 'Main1',
+        path: 'main',
+        name: 'Main',
         component: () => import('../views/main/main.vue')
       },
       {
-        path: 'main2',
-        name: 'Main2',
-        component: () => import('../views/main/mainTest1.vue')
+        path: 'liZiMain',
+        name: 'LiZiMain',
+        component: () => import('../views/main/liZiMain.vue')
       },
       {
-        path: 'main3',
-        name: 'Main3',
-        component: () => import('../views/main/mainTest2.vue')
+        path: 'javaMain',
+        name: 'JavaMain',
+        component: () => import('../views/main/javaMain.vue')
+      },
+      {
+        path: 'searchMain/:str',
+        name: 'SearchMain',
+        component: () => import('../views/main/searchMain.vue')
+      },
+      {
+        path: 'aboutHistory',
+        name: 'AboutHistory',
+        component: () => import('../views/main/aboutHistory.vue')
       },
       {
         path: 'blogDetail/:id',
@@ -43,36 +52,12 @@ const routes = [
       }
     ]
   }
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: () => import('../views/About.vue')
-  // },
-  // {
-  //   path: '/mainTest1',
-  //   name: 'MainTest1',
-  //   component: () => import('../views/main/mainTest1.vue')
-  // },
-  // {
-  //   path: '/main',
-  //   name: 'Main',
-  //   component: () => import('../views/main/main.vue')
-  // },
-  // {
-  //   path: '/main1',
-  //   name: 'Main',
-  //   component: () => import('../views/main/main.vue')
-  // },
-  // {
-  //   path: '/main2',
-  //   name: 'Main',
-  //   component: () => import('../views/main/main.vue')
-  // }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
+  // base: '/dist/',
   routes
 })
 

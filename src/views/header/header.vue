@@ -13,9 +13,10 @@
                 background-color="#efe3e3"
                 text-color="#fff"
                 active-text-color="#ffd04b">
-                <el-menu-item index="/index/main1">处理中心</el-menu-item>
-                <el-menu-item index="/index/main2">数据设置</el-menu-item>
-                <el-menu-item index="/index/main3">发布历史</el-menu-item>
+                <el-menu-item index="/index/main"><i class="el-icon-house"></i>首页</el-menu-item>
+                <el-menu-item index="/index/liZiMain"><i class="el-icon-guide"></i>栗子生活</el-menu-item>
+                <el-menu-item index="/index/javaMain"><i class="el-icon-monitor"></i>Java</el-menu-item>
+                <el-menu-item index="/index/aboutHistory"><i class="el-icon-time"></i>版本</el-menu-item>
                 <!-- <el-menu-item index="/index/blogDetail/123456789">关于本站</el-menu-item> -->
               </el-menu>
           </div>
@@ -24,8 +25,8 @@
             <div class="ck-search-inp">
                 <el-input
                   placeholder="请输入内容"
-                  suffix-icon="el-icon-search"
-                  v-model="headerText">
+                  v-model="searchStr">
+                  <i slot="suffix" @click="searchBlog" class="el-input__icon el-icon-search"></i>
                 </el-input>
             </div>
           </el-col>
@@ -43,7 +44,7 @@
                 <el-input
                   placeholder="请输入内容"
                   suffix-icon="el-icon-search"
-                  v-model="headerText">
+                  v-model="searchStr">
                 </el-input>
             </div>
           </el-col>
@@ -52,10 +53,10 @@
               <el-dropdown trigger="click" @command="handleCommand">
                 <el-button icon="el-icon-s-fold" plain style="padding: 5px 8px; font-size: 24px;"></el-button>
                 <el-dropdown-menu slot="dropdown">
-                  <el-dropdown-item command="/index/main1">黄金糕</el-dropdown-item>
-                  <el-dropdown-item command="/index/main2">狮子头</el-dropdown-item>
-                  <el-dropdown-item command="/index/main3">螺蛳粉</el-dropdown-item>
-                  <!-- <el-dropdown-item command="/index/blogDetail/123456789">螺蛳粉</el-dropdown-item> -->
+                  <el-dropdown-item icon="el-icon-house" command="/index/main">首页</el-dropdown-item>
+                  <el-dropdown-item icon="el-icon-guide" command="/index/liZiMain">栗子生活</el-dropdown-item>
+                  <el-dropdown-item icon="el-icon-monitor" command="/index/javaMain">Java</el-dropdown-item>
+                  <el-dropdown-item icon="el-icon-time" command="/index/aboutHistory">版本</el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
               </div>
@@ -90,7 +91,7 @@ export default {
       showClose: false,
       direction: 'ltr',
       activeIndex2: this.$store.state.activeMenu,
-      headerText: 'Search'
+      searchStr: ''
     }
   },
   computed: {
@@ -103,6 +104,10 @@ export default {
     },
     handleCommand (command) {
       this.$router.push({ path: command })
+    },
+    searchBlog () {
+      window.location.href = '/index/searchMain/' + this.searchStr
+      // this.$router.push({ path: '/index/searchMain/' + this.searchStr })
     }
   }
 }
