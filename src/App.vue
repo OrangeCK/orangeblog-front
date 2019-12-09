@@ -28,15 +28,7 @@
 <script>
 export default {
   created: function () {
-    console.log('clientWidth', document.documentElement.clientWidth)
-    let clientWidth = document.documentElement.clientWidth
-    if (clientWidth > 768) {
-      console.log('clientWidth-pc', clientWidth)
-      require('@/common/css/pc.css')
-    } else {
-      console.log('clientWidth-mobile', clientWidth)
-      require('@/common/css/mobile.css')
-    }
+    require('@/common/css/common.css')
   }
 }
 </script>
