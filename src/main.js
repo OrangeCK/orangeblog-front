@@ -11,7 +11,7 @@ import './router/routerPermission.js'
 Vue.config.productionTip = false
 
 let startApp = function () {
-  axios.get('./static/config.json').then((res) => {
+  axios.get('/lmorange/static/config.json').then((res) => {
     Vue.prototype.API = API.API(res.data)
     Vue.prototype.service = service
     Vue.prototype.$axios = axios

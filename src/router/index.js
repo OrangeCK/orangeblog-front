@@ -57,7 +57,7 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   // base: process.env.BASE_URL,
-  base: '/dist/',
+  base: '/lmorange/',
   routes
 })
 

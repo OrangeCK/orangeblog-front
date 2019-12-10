@@ -106,8 +106,8 @@ export default {
       this.$router.push({ path: command })
     },
     searchBlog () {
-      window.location.href = '/index/searchMain/' + this.searchStr
-      // this.$router.push({ path: '/index/searchMain/' + this.searchStr })
+      // window.location.href = '/dist/index/searchMain/' + this.searchStr
+      this.$router.push({ path: '/index/searchMain/' + this.searchStr })
     }
   }
 }

@@ -102,7 +102,7 @@ export default {
   },
   methods: {
     jumpToDetail (id) {
-      this.$router.push({ path: './index/blogDetail/' + id })
+      this.$router.push({ path: '/index/blogDetail/' + id })
     },
     getBlogCards (index) {
       let loadingInstance = this.$loading(Global.options)

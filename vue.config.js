@@ -4,10 +4,10 @@ module.exports = {
         port: 8080
         // proxy: {}
     },
-    publicPath: process.env.NODE_ENV === 'production' ? '/dist/' : './',
+    publicPath: process.env.NODE_ENV === 'production' ? '/lmorange/' : './',
     // publicPath: '/dist/',
     assetsDir: 'static',
-    outputDir: 'dist',
+    outputDir: 'lmorange',
     lintOnSave: false,
     productionSourceMap: false // 是否在构建生产包时生成 sourceMap 文件，false将提高构建速度
 }
