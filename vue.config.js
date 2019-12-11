@@ -4,8 +4,8 @@ module.exports = {
         port: 8080
         // proxy: {}
     },
-    publicPath: process.env.NODE_ENV === 'production' ? '/lmorange/' : './',
-    // publicPath: '/dist/',
+    publicPath: process.env.NODE_ENV === 'production' ? '/lmorange/' : '/',
+    // publicPath: '',
     assetsDir: 'static',
     outputDir: 'lmorange',
     lintOnSave: false,

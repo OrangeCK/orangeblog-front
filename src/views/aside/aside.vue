@@ -16,7 +16,7 @@
         <el-col :span="24">
           <el-card class="box-card ck-card-border0" shadow="always">
             <div style="text-align: center;">最新发表</div>
-            <div style="font-size:12px;margin: 15px 0;">
+            <div style="margin: 15px 0;">
               <el-link v-for="d in lastBlogs.data" :key="d.id" @click="jumpToDetail(d.id)" icon="el-icon-magic-stick">{{d.title}}</el-link>
             </div>
           </el-card>
@@ -24,7 +24,7 @@
         <el-col :span="24">
           <el-card class="box-card ck-card-border0" shadow="always">
             <div style="text-align: center;">人气排行</div>
-            <ol style="font-size:12px;">
+            <ol>
               <li v-for="d in popularBlogs.data" :key="d.id"><el-link @click="jumpToDetail(d.id)">{{d.title}}</el-link></li>
             </ol>
           </el-card>

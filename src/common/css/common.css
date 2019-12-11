@@ -7,15 +7,15 @@
         display: none;
     }
     .ck-idx-head-header {
-        font-size: 14px;
+        font-size: 16px;
         height: 70px;
     }
     .ck-idx-head-main {
         padding: 10px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .ck-idx-head-aside {
-        font-size: 12px;
+        font-size: 14px;
     }
     .ck-idx-head-aside .el-card__body{
         padding: 10px;
@@ -24,7 +24,7 @@
         padding: 0 0 0 20px;
     }
     .ck-idx-head-footer {
-        font-size: 10px;
+        font-size: 12px;
         text-align: center;
     }
     .ck-display-none-app {
@@ -45,7 +45,7 @@
         font-family: 'STXinwei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
     }
     .ck-card-tag {
-        font-size: 12px;
+        font-size: 14px;
     }
     .ck-card-tag .el-tag {
         margin: 0 5px 5px 0;
@@ -54,7 +54,7 @@
         margin-right: 0;
     }
     .ck-card-tag2 {
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 10px;
     }
     .ck-card-tag2 .el-tag {
@@ -109,7 +109,7 @@
         color: #333;
     }
     .el-link {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 @media screen and (min-width: 769px){
@@ -207,7 +207,7 @@
     color: #333;
     }
     .el-link {
-    font-size: 12px;
+    font-size: 14px;
     }
     .hljs {
     font-family: 'Consolas', 'Liberation Mono', Courier, monospace;

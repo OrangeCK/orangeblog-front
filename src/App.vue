@@ -27,9 +27,6 @@
 
 <script>
 export default {
-  created: function () {
-    require('@/common/css/common.css')
-  }
 }
 </script>
 
@@ -43,6 +40,7 @@ export default {
   background-color: #efe3e3;
   height: 100vh;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .el-drawer__header {
   margin-bottom: 0px !important;

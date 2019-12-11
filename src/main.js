@@ -7,6 +7,7 @@ import axios from 'axios'
 import service from './common/js/request'
 import API from './common/js/api'
 import './router/routerPermission.js'
+import '@/common/css/common.css'
 
 Vue.config.productionTip = false
 
