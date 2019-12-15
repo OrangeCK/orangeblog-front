@@ -6,14 +6,16 @@
           <el-card class="box-card" shadow="hover">
             <el-row :gutter="20">
               <el-col :span="8">
-                <el-image
-                  class="ck-image-radius"
-                  :src="b.imageUrl"
-                  fit="scale-down">
-                  <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline"></i>
-                  </div>
-                </el-image>
+                <viewer :images="imgArr">
+                  <el-image
+                    class="ck-image-radius"
+                    :src="b.imageUrl"
+                    fit="scale-down">
+                    <div slot="error" class="image-slot">
+                      <i class="el-icon-picture-outline"></i>
+                    </div>
+                  </el-image>
+                </viewer>
               </el-col>
               <el-col :span="16">
                 <el-link type="warning"><div class="ck-card-title" @click="jumpToDetail(b.id)">{{b.title}}</div></el-link>
@@ -48,14 +50,16 @@
                 </div>
               </el-col>
               <el-col :span="8">
-                <el-image
-                  class="ck-image-radius"
-                  :src="b.imageUrl"
-                  fit="scale-down">
-                  <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline"></i>
-                  </div>
-                </el-image>
+                <viewer :images="imgArr">
+                  <el-image
+                    class="ck-image-radius"
+                    :src="b.imageUrl"
+                    fit="scale-down">
+                    <div slot="error" class="image-slot">
+                      <i class="el-icon-picture-outline"></i>
+                    </div>
+                  </el-image>
+                </viewer>
               </el-col>
             </el-row>
           </el-card>
@@ -87,6 +91,7 @@ export default {
   data () {
     return {
       fullscreenLoading: true,
+      imgArr: ['http://2019-2-16-ck.oss-cn-beijing.aliyuncs.com/lmsystem/xiaolongxia2019-7-2.jpg'],
       blogCard: {
         data: [],
         parentCategoryId: 'java',
@@ -118,6 +123,7 @@ export default {
       }).then(res => {
         let data = res.data.data
         this.blogCard.data = data.records
+        this.imgArr.push(this.blogCard.data.imageUrl)
         this.blogCard.total = data.total
         loadingInstance.close()
       }).catch(() => {

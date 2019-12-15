@@ -86,8 +86,12 @@ export default {
   mounted () {
     this.searchBlog()
   },
-  created () {
-    this.searchStr = this.$route.params.str
+  watch: {
+    '$route' (newUrl, oldUrl) {
+      if (newUrl.params.str !== oldUrl.params.str) {
+        this.searchBlog()
+      }
+    }
   },
   methods: {
     jumpToDetail (id) {
@@ -96,7 +100,7 @@ export default {
     searchBlog () {
       let loadingInstance = this.$loading(Global.options)
       this.service({
-        url: this.API.searchBlogs + '?searchStr=' + this.searchStr,
+        url: this.API.searchBlogs + '?searchStr=' + this.$route.params.str,
         method: 'post'
       }).then(res => {
         let data = res.data.data

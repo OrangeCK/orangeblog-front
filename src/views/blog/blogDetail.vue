@@ -142,6 +142,13 @@ export default {
   },
   computed: {
   },
+  watch: {
+    '$route' (newUrl, oldUrl) {
+      if (newUrl.params.id !== oldUrl.params.id) {
+        this.getMarkdownContent()
+      }
+    }
+  },
   mounted () {
     this.getMarkdownContent()
   },

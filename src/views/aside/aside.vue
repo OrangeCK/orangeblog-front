@@ -80,13 +80,22 @@ export default {
   },
   computed: {
   },
-  mounted () {
-    this.lastPublishBlogs()
-    this.popularPublishBlogs()
+  mounted: function() {
+    // setTimeout(() => {
+    //   this.lastPublishBlogs()
+    //   this.popularPublishBlogs()
+    // }, 1000)
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.lastPublishBlogs()
+        this.popularPublishBlogs()
+      }, 100)
+    })
   },
   methods: {
     jumpToDetail (id) {
       this.$router.push({ path: '/index/blogDetail/' + id })
+      this.$emit('listenToChildEvent', false);
     },
     lastPublishBlogs () {
       this.service({

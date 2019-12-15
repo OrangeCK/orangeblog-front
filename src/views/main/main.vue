@@ -98,7 +98,11 @@ export default {
   computed: {
   },
   mounted () {
-    this.getBlogCards(this.blogCard.pageIndex)
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.getBlogCards(this.blogCard.pageIndex)
+      }, 100)
+    })
   },
   methods: {
     jumpToDetail (id) {

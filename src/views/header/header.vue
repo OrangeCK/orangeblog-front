@@ -39,16 +39,14 @@
               <el-avatar shape="square" fit="scale-down" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
             </div>
           </el-col>
-          <el-col style="width: 55%;">
+          <el-col style="width: 60%;">
             <div class="ck-search-inp">
-                <el-input
-                  placeholder="请输入内容"
-                  suffix-icon="el-icon-search"
-                  v-model="searchStr">
-                </el-input>
+              <el-input placeholder="请输入内容" v-model="searchStr">
+                <el-button @click="searchBlog" slot="append" icon="el-icon-search"></el-button>
+              </el-input>
             </div>
           </el-col>
-          <el-col style="width: 25%;">
+          <el-col style="width: 20%;">
             <div class="ck-avatar-drawer">
               <el-dropdown trigger="click" @command="handleCommand">
                 <el-button icon="el-icon-s-fold" plain style="padding: 5px 8px; font-size: 24px;"></el-button>
@@ -67,9 +65,8 @@
           :visible.sync="drawer"
           :size='size'
           :show-close="showClose"
-          :direction="direction"
-          >
-          <Aside msg='mainMenun'></Aside>
+          :direction="direction">
+          <Aside msg='mainMenun' v-on:listenToChildEvent="closeDrawer"></Aside>
       </el-drawer>
     </div>
 </template>
@@ -108,6 +105,9 @@ export default {
     searchBlog () {
       // window.location.href = '/dist/index/searchMain/' + this.searchStr
       this.$router.push({ path: '/index/searchMain/' + this.searchStr })
+    },
+    closeDrawer (data) {
+      this.drawer = data
     }
   }
 }
