@@ -34,23 +34,15 @@
             <el-row :gutter="10">
               <el-col style="width: 50%">
                 <div style="text-align: center;">微信</div>
-                <el-image
-                  :src="weixin"
-                  fit="scale-down">
-                  <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline"></i>
-                  </div>
-                </el-image>
+                <div class="el-image">
+                  <img preview="weixin" :src="weixin" class="el-image__inner" style="object-fit: scale-down;">
+                </div>
               </el-col>
               <el-col style="width: 50%">
-                <div style="text-align: center;">支付宝</div>
-                <el-image
-                  :src="weixin"
-                  fit="scale-down">
-                  <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline"></i>
-                  </div>
-                </el-image>
+                <div style="text-align: center;">公众号</div>
+                <div class="el-image">
+                  <img preview="weixin" :src="zhifubao" class="el-image__inner" style="object-fit: scale-down;">
+                </div>
               </el-col>
             </el-row>
           </el-card>
@@ -69,7 +61,8 @@ export default {
     return {
       footerText: 'Kang Chen`s Header!',
       dateValue: new Date(),
-      weixin: require('@/assets/zanshangma.png'),
+      weixin: require('@/assets/weixin.png'),
+      zhifubao: require('@/assets/weixin2.png'),
       lastBlogs: {
         data: []
       },

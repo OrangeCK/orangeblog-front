@@ -7,7 +7,7 @@ let API = function (server) {
     'popularPublishBlogs': `${server.server}/index/popularPublishBlogs`,
     'blogDiscussantPage': `${server.server}/blog/blogDiscussantPageList`,
     'saveBlogDiscussant': `${server.server}/blog/saveBlogDiscussant`,
-    'testServer8': `${server.server}/login/goLoginTest`,
+    'praiseBlog': `${server.server}/blog/praiseBlog/`,
     'testServer9': `${server.server}/login/goLoginTest`
   }
   return api

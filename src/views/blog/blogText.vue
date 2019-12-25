@@ -3,10 +3,6 @@
 </template>
 
 <script>
-import marked from 'marked'
-import hljs from 'highlight.js'
-import 'highlight.js/styles/monokai-sublime.css'
-// import '../../common/css/markdown.css'
 var rendererMD = new marked.Renderer()
 marked.setOptions({
   renderer: rendererMD,
@@ -28,12 +24,17 @@ marked.setOptions({
 export default {
   name: 'BlogText',
   props: {
-    markdownContent: String
+    blog: {
+      markdownContent: String,
+      id: String
+    }
   },
   computed: {
     compiledMarkdown: function () {
-      let html = marked(this.markdownContent || '', { sanitize: true })
-      return html.replace(/<code>/g, '<code class=\'hljs\'>')
+      let html = marked(this.blog.markdownContent || '', { sanitize: true })
+      html = html.replace(/<code>/g, '<code class=\'hljs\'>')
+      html = html.replace(/<img/g, '<img preview=' + this.blog.id + '')
+      return html
     }
   },
   mounted () {

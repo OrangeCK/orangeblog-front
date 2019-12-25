@@ -24,10 +24,8 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import Header from '../header/header'
 import Aside from '../aside/aside'
-// import Main from '../main/main'
 import Footer from '../footer/footer'
 export default {
   name: 'Index',

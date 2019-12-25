@@ -6,14 +6,9 @@
           <el-card class="box-card" shadow="hover">
             <el-row :gutter="20">
               <el-col :span="8">
-                <el-image
-                  class="ck-image-radius"
-                  :src="b.imageUrl"
-                  fit="scale-down">
-                  <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline"></i>
-                  </div>
-                </el-image>
+                <div class="el-image ck-image-radius">
+                  <img :preview="b.id" :src="b.imageUrl" class="el-image__inner" style="object-fit: scale-down;">
+                </div>
               </el-col>
               <el-col :span="16">
                 <el-link type="warning"><div class="ck-card-title" @click="jumpToDetail(b.id)">{{b.title}}</div></el-link>
@@ -48,14 +43,9 @@
                 </div>
               </el-col>
               <el-col :span="8">
-                <el-image
-                  class="ck-image-radius"
-                  :src="b.imageUrl"
-                  fit="scale-down">
-                  <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline"></i>
-                  </div>
-                </el-image>
+                <div class="el-image ck-image-radius">
+                  <img :preview="b.id" :src="b.imageUrl" class="el-image__inner" style="object-fit: scale-down;">
+                </div>
               </el-col>
             </el-row>
           </el-card>
