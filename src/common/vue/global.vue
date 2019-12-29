@@ -2,7 +2,7 @@
 const options = {
   fullscreen: true,
   lock: true,
-  background: '#efe3e3'
+  background: '#fee3c9'
 }
 export default {
   options

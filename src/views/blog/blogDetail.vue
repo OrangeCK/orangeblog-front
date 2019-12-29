@@ -19,6 +19,7 @@
           <BlogText :blog="blogText"></BlogText>
         </el-col>
       </el-row>
+      <el-divider><i class="el-icon-d-arrow-left"></i> <span style="color: #ffd04b">End</span> <i class="el-icon-d-arrow-right"></i></el-divider>
       <el-row>
         <el-col :span="24" >
           <div style="text-align:center; padding: 10px 0;">
@@ -64,12 +65,14 @@
               </template>
               <div v-for="o in blogDiscussant.data" :key="o.id" >
                 <el-row>
-                  <el-col style="width:20%;">
-                    <div class="discussant-bg"></div>
+                  <el-col style="width:20%; text-align:center;">
+                    <el-avatar shape="square" fit="scale-down"  src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+                    <div>{{o.discussant}}</div>
                   </el-col>
                   <el-col style="width:80%;">
                     <div class="discussant">
                       <span class="bot"></span>
+                      <span class="bot2"></span>
                       {{o.discussantOpinion}}
                     </div>
                   </el-col>
@@ -301,13 +304,20 @@ export default {
   margin-right: auto;
   background: url('../../assets/shangwuportrait200.png') -52px -23px no-repeat;
 }
-.discussant{padding:10px; margin-left:10px; background:#fbf6e4; position:relative;border-radius: 10px;}
+.discussant{padding:10px; margin-left:10px; border:1px #ffd04b solid; position:relative;border-radius: 10px;}
 .discussant span{width:0; height:0; font-size:0; overflow:hidden; position:absolute;}
 .discussant span.bot{
-    border-width:10px; 
+    border-width:8px; 
     border-style:solid; 
-    border-color:#ffffff #fbf6e4 #fbf6e4 #ffffff; 
-    left:-20px; 
-    top:10px;
+    border-color:transparent #ffd04b #ffd04b transparent; 
+    left:-16px; 
+    top:8px;
+}
+.discussant span.bot2{
+    border-width:7px; 
+    border-style:solid; 
+    border-color:transparent #ffffff #ffffff transparent; 
+    left:-13px; 
+    top:8px;
 }
 </style>

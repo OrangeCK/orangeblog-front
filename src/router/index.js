@@ -6,7 +6,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/index'
+    redirect: '/guide'
+  },
+  {
+    path: '/guide',
+    name: 'Guide',
+    component: () => import('../views/index/guide.vue'),
   },
   {
     path: '/index',

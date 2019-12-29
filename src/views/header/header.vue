@@ -10,7 +10,7 @@
                 mode="horizontal"
                 router
                 @select="handleSelect"
-                background-color="#efe3e3"
+                background-color="#fee3c9"
                 text-color="#fff"
                 active-text-color="#ffd04b">
                 <el-menu-item index="/index/main"><i class="el-icon-house"></i>首页</el-menu-item>
