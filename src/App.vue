@@ -20,7 +20,7 @@
     </template>
     <!-- <img src="./assets/logo.png"> -->
     <transition name="el-zoom-in-center" mode="out-in">
-      <router-view />
+      <router-view v-wechat-title="$route.meta.title" />
     </transition>
   </div>
 </template>

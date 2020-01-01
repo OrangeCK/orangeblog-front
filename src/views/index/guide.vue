@@ -37,9 +37,6 @@ export default {
   position:relative;
   height: 100%;
   width: 100%;
-  // background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-  // background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-  // background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   background-image: linear-gradient(to top, #ffecd2 0%, #fcb69f 100%);
 }
 .letter {

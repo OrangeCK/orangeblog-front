@@ -36,7 +36,7 @@
         <el-row>
           <el-col style="width: 20%;">
             <div class="ck-avatar-drawer" @click="drawer = true">
-              <el-avatar shape="square" fit="scale-down" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+              <el-avatar shape="square" fit="scale-down" src="https://www.lmorange.com/oss-image/lmsystem/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200101224205.jpg"></el-avatar>
             </div>
           </el-col>
           <el-col style="width: 60%;">

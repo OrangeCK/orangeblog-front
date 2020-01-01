@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-right: -10px;margin-left: -10px;">
+  <div style="margin-right: -10px;margin-left: -10px;" v-wechat-title="$route.meta.title=blog.title">
     <el-card class="ck-card-blogDetail">
       <div slot="header">
         <div class="ck-card-title">
@@ -19,7 +19,7 @@
           <BlogText :blog="blogText"></BlogText>
         </el-col>
       </el-row>
-      <el-divider><i class="el-icon-d-arrow-left"></i> <span style="color: #ffd04b">End</span> <i class="el-icon-d-arrow-right"></i></el-divider>
+      <el-divider><i class="el-icon-d-arrow-left"></i> <span>End</span> <i class="el-icon-d-arrow-right"></i></el-divider>
       <el-row>
         <el-col :span="24" >
           <div style="text-align:center; padding: 10px 0;">
@@ -45,9 +45,9 @@
                   <el-switch
                     v-model="blogDiscussant.discussantSex"
                     active-color="#13ce66"
-                    inactive-color="#ff4949"
-                    active-text="靓仔"
-                    inactive-text="淑女">
+                    inactive-color="#fee3c9"
+                    active-text="智慧"
+                    inactive-text="多金">
                   </el-switch>
                 </el-form-item>
                 <el-form-item label="留言" prop="discussantOpinion">

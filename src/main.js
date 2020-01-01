@@ -10,9 +10,11 @@ import '@/common/css/common.css'
 import Element from 'element-ui'
 import preview from 'vue-photo-preview'
 import 'vue-photo-preview/dist/skin.css'
+import VueWechatTitle from 'vue-wechat-title'
 
 Vue.config.productionTip = false
 
+Vue.use(VueWechatTitle)
 Vue.use(Element)
 Vue.use(preview, {
   fullscreenEl:false

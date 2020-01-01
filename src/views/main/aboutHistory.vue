@@ -33,6 +33,13 @@ export default {
     return {
       footerText: 'Kang Chen`s Header!',
       activities: [{
+        title: '版本 V2.3.0',
+        content: '增加导航页，调整了整个颜色的基调为偏橘色',
+        timestamp: '2019-12-29',
+        size: 'large',
+        type: 'warning',
+        icon: 'el-icon-s-data'
+      },{
         title: '版本 V2.2.0',
         content: '使用cdn加速、gzip压缩、路由懒加载来优化首页的加载速度',
         timestamp: '2019-12-25',

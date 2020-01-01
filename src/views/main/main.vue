@@ -77,6 +77,9 @@ export default {
   data () {
     return {
       fullscreenLoading: true,
+      index: {
+        title: '主页'
+      },
       blogCard: {
         data: [],
         pageIndex: 1,

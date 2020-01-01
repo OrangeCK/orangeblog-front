@@ -3,14 +3,15 @@
       <el-row>
         <el-col :span="24">
           <div class="ck-avatar-img">
-              <el-avatar shape="square" fit="scale-down"  src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+              <el-avatar shape="square" fit="scale-down" :size="40" src="https://www.lmorange.com/oss-image/lmsystem/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200101224205.jpg"></el-avatar>
               <div class="sub-title">栗子味橙子</div>
           </div>
         </el-col>
         <el-col :span="24">
           <el-card class="box-card ck-card-border0" shadow="always">
             <div class="sub-title" style="text-align: center;">自我介绍</div>
-            <p>XX，目前就职于顺丰速运，热爱编码、喜欢运动，爱足球、爱生活；喜欢交友如果你也和我一样，那就互粉吧</p>
+            <p>橙子，目前就职于顺丰速运，喜欢优美的编码，热爱运动、擅长足球；喜欢充实有意义的生活，
+              记录身边的点滴，让它不只存在于过去；喜欢了解探索未知的领域，在这看似规律的生活中增加一些悸动</p>
           </el-card>
         </el-col>
         <el-col :span="24">
